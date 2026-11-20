@@ -15,7 +15,7 @@ if (!empty($_GET['tanggal_mulai']) && !empty($_GET['tanggal_selesai'])) {
     
     $res = mysqli_query($conn, $q);
     while ($r = mysqli_fetch_assoc($res)) {
-        $rekap[] = $r;
+        $rekap[] = $r;  
     }
 }
 ?>
@@ -60,6 +60,5 @@ if (!empty($_GET['tanggal_mulai']) && !empty($_GET['tanggal_selesai'])) {
     <?php elseif (isset($_GET['tanggal_mulai'])): ?>
         <p>Tidak ada data transaksi pada rentang tanggal tersebut.</p>
     <?php endif; ?>
-
 </body>
 </html>
